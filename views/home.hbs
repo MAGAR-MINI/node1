@@ -1,12 +1,50 @@
 {{>header}}
 <h1>{{title}}</h1>
 
+<div class="sidebar">
+    <h2>Categories</h2>
+    <a href="#">Category 1</a>
+    <a href="#">Category 2</a>
+    <a href="#">Category 3</a>
+    <a href="#">Category 4</a>
+    <!-- Add more categories as needed -->
+</div>
+
+<div style="margin-left: 200px; /* Same as the width of the sidebar */">
+    <h1>Home Page Content</h1>
+    <p>This is the main content of the home page.</p>
+</div>
+
 <ul>
   {{#each users}}
     <li>firstName: {{this.firstName}}, userName: {{this.userName}}, email: {{this.email}}</li>
     {{/each}} 
 </ul>
 
-    {{!-- <img src="https://www.ivory.co.il/files/catalog/org/1706174584l84Is.webp" alt="computer" /> --}}
+   <style>
+        /* Style the sidebar */
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f1f1f1;
+            padding-top: 20px;
+        }
 
+        /* Style the sidebar links */
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .sidebar a:hover {
+            background-color: #555;
+            color: white;
+        }
+    </style>
 {{>footer}}
