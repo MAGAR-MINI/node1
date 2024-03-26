@@ -20,12 +20,6 @@ app.use(express.static(path.join(__dirname,'public')));
 console.log(chalk.blueBright('Meshulami'));
 hbs.registerPartials(__dirname + '/views/partials');
 
-// START  ---> / --> middleware (console.log) --> get (path /) --> return resposnse --> END
-
-// app.use((request, response, next) =>{
-//     console.log(chalk.blueBright(`Requested URL: ${request.url}`));
-//     next();
-// })
 
 app.use('/products', productRouter);
 

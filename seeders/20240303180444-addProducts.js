@@ -12,7 +12,7 @@ module.exports = {
     */
     const createdAt = new Date();
     const updatedAt = new Date();
-    await queryInterface.bulkInsert('products', products.map(p => ({createdAt, updatedAt ,...p})), {});
+    await queryInterface.bulkInsert('products', products.map(p => ({ createdAt, updatedAt, ...p, category: 'New Category' })), {});
 
   },
 
