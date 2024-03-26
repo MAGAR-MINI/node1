@@ -1,37 +1,65 @@
-
-.top-nav ul{
+.top-nav ul {
     list-style: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap:10;
+    gap: 10;
 }
-.top-nav{
+
+.top-nav {
     display: flex;
     justify-content: center;
 }
 
-.top-nav ul li a{
+.top-nav ul li a {
     display: block;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1rem;
     background-color: black;
-    color:white;
-    padding:7px 10px;
-}
-.top-nav ul li  a{
- margin:0 7px;
- text-decoration: none;
+    color: white;
+    padding: 7px 10px;
 }
 
-.page-404{
+.top-nav ul li a {
+    margin: 0 7px;
+    text-decoration: none;
+}
+
+.page-404 {
     background-color: gold;
     text-align: center;
 }
-.page-404 h1{
+
+.page-404 h1 {
     font-size: 4rem;
 }
-.page-404 a{
+
+.page-404 a {
     font-size: 2rem;
+}
+
+/* Style the sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    padding-top: 20px;
+}
+
+/* Style the sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
 }

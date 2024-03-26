@@ -34,10 +34,7 @@ app.get('/register', (req, response) => {
     response.render('register');
 });
 
-// new data sent to user
-//  product/10
 
-///   user/333   /user/2345
 app.get('/user/:userId', (request, response) => {
 
         const userId = parseInt(request.params.userId);
@@ -53,10 +50,7 @@ app.get('/user/:userId', (request, response) => {
         
 
 })
-// URL -> 
-// HEDARES
-// BODY
-// url encode -> url decode
+
 
 app.post('/new-user', (request, response) => {
     
@@ -66,12 +60,6 @@ app.post('/new-user', (request, response) => {
     Users.push({firstName, userName, email, password, id: Users.length + 1});
     response.redirect('/');
 });
-
-// products/234
-
-// -> name, price, id, descripion
-
-
 
 app.get('/users', (req, res) => {
     console.log(chalk.blueBright('Users page'));
@@ -93,13 +81,9 @@ app.listen(PORT, async () =>{
             await db.authenticate();
             await Product.sync();
             await ProductImage.sync();
-            console.log(chalk.bgYellowBright(`Server is running on Port ${PORT}, Succssfully connected to Databsae`));
+            console.log(chalk.bgYellowBright(`Server is running on Port ${PORT}, Succssfully connected to Database`));
         }catch(e){
-            console.log(chalk.bgRedBright(`Server is running on Port ${PORT}, Could not connected to Databsae`));
+            console.log(chalk.bgRedBright(`Server is running on Port ${PORT}, Could not connected to Database`));
         }
 });
 
-// db.sync()
-//     .then(() =>{
-//         console.log(chalk.bgYellowBright(`Models Succssfully created.`));
-//     });
